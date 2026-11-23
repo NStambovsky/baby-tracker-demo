@@ -1,17 +1,29 @@
-# Baby Tracker Demo
+# Baby Tracker
 
-A mobile-friendly baby care tracker demo with feeding and sleep timers, diaper logs, measurements, editable entries, filters, and charts.
+Try the [dummy demo](https://nstambovsky.github.io/baby-tracker-demo/), then clone this repository to run your own private app. MIT licensed: use, modify, and host your own copy.
 
-## Try it locally
+- **Root:** a static portfolio demo with fictional data. Edits stay in this tab’s memory and reset on refresh. No account, password, backend, or live data connection.
+- **self-hosted/:** the real password-protected Cloudflare Worker + D1 app, starting with an empty database. You supply your own Cloudflare account and secrets.
 
-Run `npm start` and open http://localhost:8080. Requires Python 3; no package installation needed. Run `npm test` with Node 20 or newer to check the demo data layer.
+## Use it yourself
 
-## Privacy by design
+```sh
+git clone https://github.com/NStambovsky/baby-tracker-demo.git
+cd baby-tracker-demo
+```
 
-This standalone portfolio edition contains only fictional sample entries generated at runtime. All edits stay in JavaScript memory in the current tab. Refresh or choose **Reset demo** to start over. There is no backend, database, login, password, analytics, external API, browser storage, or service worker. No original Git history, family backups, live deployment configuration, or credentials are included.
+Follow [Cloudflare setup](docs/CLOUDFLARE.md), [phone home-screen instructions](docs/PHONE.md), or give your coding agent [AGENTS.md](AGENTS.md). Neither edition contains the author’s personal records or credentials. Self-hosted records belong in your own private database, never in Git.
 
-Use fictional information when trying the demo. Hosting providers may keep ordinary access logs; the app itself does not transmit entries.
+## Try the demo locally
 
-## Hosting
+```sh
+npm start
+```
 
-Publish the repository root with any static host, including GitHub Pages. Relative asset paths support hosting under a project subdirectory. This demo is for exploration, not for storing real care records or making medical decisions.
+Open http://localhost:8080. Python 3 required. `npm test` runs the demo checks with Node 22+. The deployed private app needs Node 22+ for the pinned setup tooling.
+
+## Features
+
+Feeding and sleep timers, bottle amounts, diaper logs, notes, weight and height measurements, editable history, filters, and charts. Two phones can share one deployment and password.
+
+The public demo does not save real records. The private app is a personal shared-password tool, not a service with separate user accounts. Hosting and optional AI usage are charged to whoever deploys it under their provider’s current terms.

@@ -1,0 +1,31 @@
+{
+  "name": "my-baby-tracker",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-23",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "vars": {
+    "NODE_ENV": "production",
+    "TZ": "America/New_York"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "my-baby-tracker-db",
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true
+    }
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}

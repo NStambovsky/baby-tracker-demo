@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS entries (id TEXT PRIMARY KEY, time_start TEXT NOT NULL, data TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS entries_time ON entries(time_start DESC);
+CREATE TABLE IF NOT EXISTS login_attempts (ip TEXT PRIMARY KEY, attempts INTEGER NOT NULL, reset_at INTEGER NOT NULL);
